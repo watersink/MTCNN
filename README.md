@@ -14,6 +14,12 @@ main ：FCFacedet.cpp
 sdk测试模块
 main：FCFacedet_Tester.cpp
 
+## linux
+  cd FCFacedet_Tester/FCFacedet_Tester
+  make
+  export LD_LIBRARY_PATH=./
+  ./FCFacedetTester
+
 ## Results
 
 ![image](FCFacedet/FCFacedet/result.png)
