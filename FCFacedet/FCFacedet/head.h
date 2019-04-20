@@ -13,9 +13,11 @@
 #include <caffe/layers/softmax_layer.hpp>
 #include<caffe/layers/split_layer.hpp>
 
+#include "osplatformutil.h"
 
 namespace caffe
 {
+#if defined I_OS_WIN32
 	extern INSTANTIATE_CLASS(InputLayer);
 	extern INSTANTIATE_CLASS(InnerProductLayer);
 	extern INSTANTIATE_CLASS(DropoutLayer);
@@ -34,5 +36,5 @@ namespace caffe
 	extern INSTANTIATE_CLASS(PReLULayer);
 	//REGISTER_LAYER_CLASS(PReLU);
 	extern INSTANTIATE_CLASS(SplitLayer);
-
+#endif
 }
